@@ -20,7 +20,7 @@ public class ConsultaFila extends javax.swing.JFrame {
     public ConsultaFila() {
         initComponents();
         
-        Volta4.setBackground(new java.awt.Color(0,0,0,1));
+     
       
     }
 
@@ -44,12 +44,15 @@ public class ConsultaFila extends javax.swing.JFrame {
         botão2 = new Modelos.Botão();
         Del = new Modelos.Botão();
         Volta4 = new javax.swing.JButton();
+        botão1 = new Modelos.Botão();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1346, 862));
         getContentPane().setLayout(null);
 
+        E1.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        E1.setText("    P1645");
         E1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 E1ActionPerformed(evt);
@@ -57,8 +60,19 @@ public class ConsultaFila extends javax.swing.JFrame {
         });
         getContentPane().add(E1);
         E1.setBounds(190, 290, 333, 120);
+
+        E2.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        E2.setText("    C7812");
+        E2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                E2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(E2);
         E2.setBounds(190, 430, 333, 120);
+
+        E3.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        E3.setText("    R5482");
         getContentPane().add(E3);
         E3.setBounds(190, 570, 333, 120);
 
@@ -103,7 +117,7 @@ public class ConsultaFila extends javax.swing.JFrame {
             }
         });
         getContentPane().add(ProxA);
-        ProxA.setBounds(100, 730, 273, 71);
+        ProxA.setBounds(60, 730, 273, 71);
 
         botão2.setBackground(new java.awt.Color(19, 107, 105));
         botão2.setBorder(null);
@@ -121,7 +135,7 @@ public class ConsultaFila extends javax.swing.JFrame {
             }
         });
         getContentPane().add(botão2);
-        botão2.setBounds(410, 730, 273, 71);
+        botão2.setBounds(620, 730, 273, 71);
 
         Del.setBackground(new java.awt.Color(19, 107, 105));
         Del.setBorder(null);
@@ -139,7 +153,7 @@ public class ConsultaFila extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Del);
-        Del.setBounds(1000, 730, 273, 71);
+        Del.setBounds(1020, 730, 273, 71);
 
         Volta4.setForeground(new java.awt.Color(255, 255, 255));
         Volta4.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\de-volta.png")); // NOI18N
@@ -151,6 +165,23 @@ public class ConsultaFila extends javax.swing.JFrame {
         });
         getContentPane().add(Volta4);
         Volta4.setBounds(100, 130, 90, 60);
+
+        botão1.setBackground(new java.awt.Color(19, 107, 105));
+        botão1.setForeground(new java.awt.Color(255, 255, 255));
+        botão1.setText("Próxima Consulta");
+        botão1.setBorderColor(new java.awt.Color(19, 107, 105));
+        botão1.setColor(new java.awt.Color(19, 107, 105));
+        botão1.setColorClick(new java.awt.Color(19, 107, 105));
+        botão1.setColorOver(new java.awt.Color(19, 107, 105));
+        botão1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        botão1.setRadius(65);
+        botão1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botão1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(botão1);
+        botão1.setBounds(340, 730, 273, 71);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\Fila.png")); // NOI18N
         jLabel1.setText("jLabel1");
@@ -176,14 +207,13 @@ public class ConsultaFila extends javax.swing.JFrame {
                 String textoCampo1 = E1.getText();
                 C1.setText(textoCampo1);
                 E1.setText("");
-                
-                String textoCampo2 = E2.getText();
-                C2.setText(textoCampo2);
-                E2.setText("");
+             
     }//GEN-LAST:event_ProxAActionPerformed
 
     private void botão2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão2ActionPerformed
-      
+                String textoCampo3 = E3.getText();
+                C3.setText(textoCampo3);
+                E3.setText("");      
     }//GEN-LAST:event_botão2ActionPerformed
 
     private void DelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DelActionPerformed
@@ -201,6 +231,16 @@ public class ConsultaFila extends javax.swing.JFrame {
        mn.setVisible(true);
        dispose();
     }//GEN-LAST:event_Volta4ActionPerformed
+
+    private void E2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_E2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_E2ActionPerformed
+
+    private void botão1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão1ActionPerformed
+                String textoCampo3 = E2.getText();
+                C2.setText(textoCampo3);
+                E2.setText("");      
+    }//GEN-LAST:event_botão1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,6 +295,7 @@ public class ConsultaFila extends javax.swing.JFrame {
     private javax.swing.JTextField E3;
     private Modelos.Botão ProxA;
     private javax.swing.JButton Volta4;
+    private Modelos.Botão botão1;
     private Modelos.Botão botão2;
     private Modelos.BotãoExcl botãoExcl2;
     private javax.swing.JLabel jLabel1;

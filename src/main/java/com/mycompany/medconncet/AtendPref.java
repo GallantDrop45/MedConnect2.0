@@ -4,6 +4,10 @@
  */
 package com.mycompany.medconncet;
 
+import static com.mycompany.medconncet.Senha2.gerarSenha2;
+import static com.mycompany.medconncet.Senha3.gerarSenha3;
+import static com.mycompany.medconncet.Senha4.gerarSenha4;
+
 /**
  *
  * @author tiago
@@ -15,7 +19,7 @@ public class AtendPref extends javax.swing.JFrame {
      */
     public AtendPref() {
         initComponents();
-        Volta2.setBackground(new java.awt.Color(0,0,0,1));
+       
     }
 
     /**
@@ -29,7 +33,7 @@ public class AtendPref extends javax.swing.JFrame {
 
         Volta2 = new javax.swing.JButton();
         botão1 = new Modelos.Botão();
-        CaixaTx = new Modelos.TextField();
+        NSpref = new Modelos.TextField();
         jPanel1 = new javax.swing.JPanel();
         Espaco = new javax.swing.JButton();
         e = new Modelos.Botão();
@@ -61,6 +65,7 @@ public class AtendPref extends javax.swing.JFrame {
         botão4 = new Modelos.Botão();
         botão2 = new Modelos.Botão();
         jLabel1 = new javax.swing.JLabel();
+        Psenha3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1350, 900));
@@ -94,10 +99,10 @@ public class AtendPref extends javax.swing.JFrame {
         getContentPane().add(botão1);
         botão1.setBounds(980, 370, 244, 65);
 
-        CaixaTx.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        CaixaTx.setLineColor(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CaixaTx);
-        CaixaTx.setBounds(100, 370, 814, 65);
+        NSpref.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        NSpref.setLineColor(new java.awt.Color(255, 255, 255));
+        getContentPane().add(NSpref);
+        NSpref.setBounds(100, 370, 814, 65);
 
         jPanel1.setBackground(new java.awt.Color(19, 107, 105));
         jPanel1.setLayout(null);
@@ -598,6 +603,10 @@ public class AtendPref extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1340, 860);
 
+        Psenha3.setText("jTextField1");
+        getContentPane().add(Psenha3);
+        Psenha3.setBounds(1190, 150, 71, 22);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -609,128 +618,133 @@ public class AtendPref extends javax.swing.JFrame {
     }//GEN-LAST:event_Volta2ActionPerformed
 
     private void botão1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão1ActionPerformed
-        SenhaPref snh2 = new SenhaPref();
-        snh2.setVisible(true);
+        String gerarSenha3 = gerarSenha3(4);
+        Psenha3.setText(gerarSenha3);
+
+        SenhaPref prf = new SenhaPref();
+        prf.Npref.setText(NSpref.getText());
+        prf.Senha4.setText(Psenha3.getText());
+        prf.setVisible(true);
         dispose();
     }//GEN-LAST:event_botão1ActionPerformed
 
     private void EspacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspacoActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+" ");
+        NSpref.setText(NSpref.getText()+" ");
     }//GEN-LAST:event_EspacoActionPerformed
 
     private void eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+e.getText());
+        NSpref.setText(NSpref.getText()+e.getText());
     }//GEN-LAST:event_eActionPerformed
 
     private void wActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+w.getText());
+        NSpref.setText(NSpref.getText()+w.getText());
     }//GEN-LAST:event_wActionPerformed
 
     private void qActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+q.getText());
+        NSpref.setText(NSpref.getText()+q.getText());
     }//GEN-LAST:event_qActionPerformed
 
     private void rActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+r.getText());
+        NSpref.setText(NSpref.getText()+r.getText());
     }//GEN-LAST:event_rActionPerformed
 
     private void tActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+t.getText());
+        NSpref.setText(NSpref.getText()+t.getText());
     }//GEN-LAST:event_tActionPerformed
 
     private void yActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+y.getText());
+        NSpref.setText(NSpref.getText()+y.getText());
     }//GEN-LAST:event_yActionPerformed
 
     private void uActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+u.getText());
+        NSpref.setText(NSpref.getText()+u.getText());
     }//GEN-LAST:event_uActionPerformed
 
     private void iActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+i.getText());
+        NSpref.setText(NSpref.getText()+i.getText());
     }//GEN-LAST:event_iActionPerformed
 
     private void oActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+o.getText());
+        NSpref.setText(NSpref.getText()+o.getText());
     }//GEN-LAST:event_oActionPerformed
 
     private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+a.getText());
+        NSpref.setText(NSpref.getText()+a.getText());
     }//GEN-LAST:event_aActionPerformed
 
     private void sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+s.getText());
+        NSpref.setText(NSpref.getText()+s.getText());
     }//GEN-LAST:event_sActionPerformed
 
     private void dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+d.getText());
+        NSpref.setText(NSpref.getText()+d.getText());
     }//GEN-LAST:event_dActionPerformed
 
     private void fActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+f.getText());
+        NSpref.setText(NSpref.getText()+f.getText());
     }//GEN-LAST:event_fActionPerformed
 
     private void gActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+g.getText());
+        NSpref.setText(NSpref.getText()+g.getText());
     }//GEN-LAST:event_gActionPerformed
 
     private void hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+h.getText());
+        NSpref.setText(NSpref.getText()+h.getText());
     }//GEN-LAST:event_hActionPerformed
 
     private void jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+j.getText());
+        NSpref.setText(NSpref.getText()+j.getText());
     }//GEN-LAST:event_jActionPerformed
 
     private void kActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+k.getText());
+        NSpref.setText(NSpref.getText()+k.getText());
     }//GEN-LAST:event_kActionPerformed
 
     private void lActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+l.getText());
+        NSpref.setText(NSpref.getText()+l.getText());
     }//GEN-LAST:event_lActionPerformed
 
     private void pActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+p.getText());
+        NSpref.setText(NSpref.getText()+p.getText());
     }//GEN-LAST:event_pActionPerformed
 
     private void zActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+z.getText());
+        NSpref.setText(NSpref.getText()+z.getText());
     }//GEN-LAST:event_zActionPerformed
 
     private void xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+x.getText());
+        NSpref.setText(NSpref.getText()+x.getText());
     }//GEN-LAST:event_xActionPerformed
 
     private void vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+v.getText());
+        NSpref.setText(NSpref.getText()+v.getText());
     }//GEN-LAST:event_vActionPerformed
 
     private void bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+b.getText());
+        NSpref.setText(NSpref.getText()+b.getText());
     }//GEN-LAST:event_bActionPerformed
 
     private void mActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+m.getText());
+        NSpref.setText(NSpref.getText()+m.getText());
     }//GEN-LAST:event_mActionPerformed
 
     private void cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+c.getText());
+        NSpref.setText(NSpref.getText()+c.getText());
     }//GEN-LAST:event_cActionPerformed
 
     private void nActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+n.getText());
+        NSpref.setText(NSpref.getText()+n.getText());
     }//GEN-LAST:event_nActionPerformed
 
     private void botão4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão4ActionPerformed
         String bt;
-        if(CaixaTx.getText().length()>0){
+        if(NSpref.getText().length()>0){
         }
 
-        StringBuilder st = new StringBuilder(CaixaTx.getText());
-        st.deleteCharAt(CaixaTx.getText().length()-1);
+        StringBuilder st = new StringBuilder(NSpref.getText());
+        st.deleteCharAt(NSpref.getText().length()-1);
         bt = st.toString();
-        CaixaTx.setText(bt);
+        NSpref.setText(bt);
     }//GEN-LAST:event_botão4ActionPerformed
 
     private void botão2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botão2MouseClicked
@@ -835,8 +849,9 @@ public class AtendPref extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Modelos.TextField CaixaTx;
     private javax.swing.JButton Espaco;
+    private Modelos.TextField NSpref;
+    private javax.swing.JTextField Psenha3;
     private javax.swing.JButton Volta2;
     private Modelos.Botão a;
     private Modelos.Botão b;

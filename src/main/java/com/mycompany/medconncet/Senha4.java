@@ -4,7 +4,7 @@ package com.mycompany.medconncet;
 import java.security.SecureRandom;
 
 public class Senha4 {
-    private static final String LETRAS = "E";
+    private static final String LETRAS = "R";
     private static final String NUMEROS = "0123456789";
     
     private static final SecureRandom random = new SecureRandom();

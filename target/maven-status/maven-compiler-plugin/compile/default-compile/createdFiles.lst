@@ -87,6 +87,7 @@ com\mycompany\medconncet\AtendCom$3.class
 com\mycompany\medconncet\AtendPref$9.class
 com\mycompany\medconncet\AtendCom$9.class
 com\mycompany\medconncet\ConsultaFila$1.class
+com\mycompany\medconncet\SenhaExam$3.class
 com\mycompany\medconncet\AtendCom$15.class
 com\mycompany\medconncet\AtendCom$25.class
 com\mycompany\medconncet\AtendCom$6.class
@@ -102,12 +103,14 @@ com\mycompany\medconncet\AtendPref$29.class
 com\mycompany\medconncet\AtendPref$1.class
 com\mycompany\medconncet\Menu$2.class
 com\mycompany\medconncet\AtendPref$14.class
-com\mycompany\medconncet\SenhaPref$5.class
 com\mycompany\medconncet\AtendPref$26.class
 com\mycompany\medconncet\ResulExa$25.class
 com\mycompany\medconncet\ConsultaFila$7.class
 com\mycompany\medconncet\SenhaPref$2.class
 com\mycompany\medconncet\ResulExa$2.class
+com\mycompany\medconncet\GuardaSenha.class
+com\mycompany\medconncet\ConsultaFila$9.class
+com\mycompany\medconncet\ConsultaFila$10.class
 com\mycompany\medconncet\AtendCom$24.class
 com\mycompany\medconncet\Senha4.class
 com\mycompany\medconncet\ResulExa$4.class

@@ -32,20 +32,20 @@ public class Senha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CaixaTx = new Modelos.TextField();
+        NSexam2 = new Modelos.TextField();
         BotãoVolta4 = new javax.swing.JButton();
         gerarSenha = new Modelos.Botão();
-        Senha = new javax.swing.JTextField();
+        Senha2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1346, 862));
         getContentPane().setLayout(null);
 
-        CaixaTx.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        CaixaTx.setLineColor(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CaixaTx);
-        CaixaTx.setBounds(120, 380, 814, 65);
+        NSexam2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        NSexam2.setLineColor(new java.awt.Color(255, 255, 255));
+        getContentPane().add(NSexam2);
+        NSexam2.setBounds(120, 380, 814, 65);
 
         BotãoVolta4.setForeground(new java.awt.Color(255, 255, 255));
         BotãoVolta4.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\de-volta.png")); // NOI18N
@@ -76,11 +76,11 @@ public class Senha extends javax.swing.JFrame {
         getContentPane().add(gerarSenha);
         gerarSenha.setBounds(980, 380, 244, 65);
 
-        Senha.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
-        Senha.setBorder(null);
-        Senha.setDisabledTextColor(new java.awt.Color(255, 255, 255));
-        getContentPane().add(Senha);
-        Senha.setBounds(500, 530, 333, 120);
+        Senha2.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        Senha2.setBorder(null);
+        Senha2.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        getContentPane().add(Senha2);
+        Senha2.setBounds(500, 530, 333, 120);
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\Senha2.PNG")); // NOI18N
         jLabel1.setText("jLabel1");
@@ -92,14 +92,15 @@ public class Senha extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotãoVolta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotãoVolta4ActionPerformed
-        Menu mn = new Menu();
-        mn.setVisible(true);
-        dispose();
+       AtendCom com = new AtendCom();
+       com.setVisible(true);
+       dispose();
     }//GEN-LAST:event_BotãoVolta4ActionPerformed
 
     private void gerarSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarSenhaActionPerformed
-       String gerarSenha2 = gerarSenha2 (4); 
-       Senha.setText(gerarSenha2);        
+                Menu mn = new Menu();
+                mn.setVisible(true);
+                dispose();
     }//GEN-LAST:event_gerarSenhaActionPerformed
 
     /**
@@ -140,9 +141,9 @@ public class Senha extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotãoVolta4;
-    private Modelos.TextField CaixaTx;
-    private javax.swing.JTextField Senha;
-    private Modelos.Botão gerarSenha;
+    public Modelos.TextField NSexam2;
+    public javax.swing.JTextField Senha2;
+    public Modelos.Botão gerarSenha;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,7 +30,7 @@ public class Senha3 {
 
     public static void main(String[] args) {
         
-        String senhaGerada = gerarSenha3(5);
+        String senhaGerada = gerarSenha3(4);
         System.out.println("Senha gerada: " + senhaGerada);
     }
 }

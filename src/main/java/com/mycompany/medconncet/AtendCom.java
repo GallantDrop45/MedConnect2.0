@@ -4,6 +4,9 @@
  */
 package com.mycompany.medconncet;
 
+import static com.mycompany.medconncet.Senha2.gerarSenha2;
+import static com.mycompany.medconncet.Senha4.gerarSenha4;
+
 /**
  *
  * @author tiago
@@ -16,7 +19,7 @@ public class AtendCom extends javax.swing.JFrame {
     public AtendCom() {
         initComponents();
         
-        Volta1.setBackground(new java.awt.Color(0,0,0,1));
+       
     }
 
     /**
@@ -30,7 +33,7 @@ public class AtendCom extends javax.swing.JFrame {
 
         botão1 = new Modelos.Botão();
         Volta1 = new javax.swing.JButton();
-        CaixaTx = new Modelos.TextField();
+        PSnom = new Modelos.TextField();
         jPanel1 = new javax.swing.JPanel();
         Espaco = new javax.swing.JButton();
         e = new Modelos.Botão();
@@ -62,6 +65,7 @@ public class AtendCom extends javax.swing.JFrame {
         botão4 = new Modelos.Botão();
         botão2 = new Modelos.Botão();
         jLabel1 = new javax.swing.JLabel();
+        Psenha2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1350, 900));
@@ -97,10 +101,10 @@ public class AtendCom extends javax.swing.JFrame {
         getContentPane().add(Volta1);
         Volta1.setBounds(120, 110, 90, 60);
 
-        CaixaTx.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        CaixaTx.setLineColor(new java.awt.Color(255, 255, 255));
-        getContentPane().add(CaixaTx);
-        CaixaTx.setBounds(120, 380, 814, 65);
+        PSnom.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        PSnom.setLineColor(new java.awt.Color(255, 255, 255));
+        getContentPane().add(PSnom);
+        PSnom.setBounds(120, 380, 814, 65);
 
         jPanel1.setBackground(new java.awt.Color(19, 107, 105));
         jPanel1.setLayout(null);
@@ -600,6 +604,8 @@ public class AtendCom extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\AtendimentoCom.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1340, 880);
+        getContentPane().add(Psenha2);
+        Psenha2.setBounds(1220, 120, 64, 22);
 
         pack();
         setLocationRelativeTo(null);
@@ -612,128 +618,134 @@ public class AtendCom extends javax.swing.JFrame {
     }//GEN-LAST:event_Volta1ActionPerformed
 
     private void botão1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão1ActionPerformed
-         Senha snh = new Senha();
-        snh.setVisible(true);
+        String gerarSenha2 = gerarSenha2(4);
+        Psenha2.setText(gerarSenha2);  
+       
+       
+        Senha sen = new Senha();
+        sen.NSexam2.setText(PSnom.getText());
+        sen.Senha2.setText(Psenha2.getText());
+        sen.setVisible(true);
         dispose();
     }//GEN-LAST:event_botão1ActionPerformed
 
     private void EspacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspacoActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+" ");
+        PSnom.setText(PSnom.getText()+" ");
     }//GEN-LAST:event_EspacoActionPerformed
 
     private void eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+e.getText());
+        PSnom.setText(PSnom.getText()+e.getText());
     }//GEN-LAST:event_eActionPerformed
 
     private void wActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+w.getText());
+        PSnom.setText(PSnom.getText()+w.getText());
     }//GEN-LAST:event_wActionPerformed
 
     private void qActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+q.getText());
+        PSnom.setText(PSnom.getText()+q.getText());
     }//GEN-LAST:event_qActionPerformed
 
     private void rActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+r.getText());
+        PSnom.setText(PSnom.getText()+r.getText());
     }//GEN-LAST:event_rActionPerformed
 
     private void tActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+t.getText());
+        PSnom.setText(PSnom.getText()+t.getText());
     }//GEN-LAST:event_tActionPerformed
 
     private void yActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+y.getText());
+        PSnom.setText(PSnom.getText()+y.getText());
     }//GEN-LAST:event_yActionPerformed
 
     private void uActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+u.getText());
+        PSnom.setText(PSnom.getText()+u.getText());
     }//GEN-LAST:event_uActionPerformed
 
     private void iActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+i.getText());
+        PSnom.setText(PSnom.getText()+i.getText());
     }//GEN-LAST:event_iActionPerformed
 
     private void oActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+o.getText());
+        PSnom.setText(PSnom.getText()+o.getText());
     }//GEN-LAST:event_oActionPerformed
 
     private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+a.getText());
+        PSnom.setText(PSnom.getText()+a.getText());
     }//GEN-LAST:event_aActionPerformed
 
     private void sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+s.getText());
+        PSnom.setText(PSnom.getText()+s.getText());
     }//GEN-LAST:event_sActionPerformed
 
     private void dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+d.getText());
+        PSnom.setText(PSnom.getText()+d.getText());
     }//GEN-LAST:event_dActionPerformed
 
     private void fActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+f.getText());
+        PSnom.setText(PSnom.getText()+f.getText());
     }//GEN-LAST:event_fActionPerformed
 
     private void gActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+g.getText());
+        PSnom.setText(PSnom.getText()+g.getText());
     }//GEN-LAST:event_gActionPerformed
 
     private void hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+h.getText());
+        PSnom.setText(PSnom.getText()+h.getText());
     }//GEN-LAST:event_hActionPerformed
 
     private void jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+j.getText());
+        PSnom.setText(PSnom.getText()+j.getText());
     }//GEN-LAST:event_jActionPerformed
 
     private void kActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+k.getText());
+        PSnom.setText(PSnom.getText()+k.getText());
     }//GEN-LAST:event_kActionPerformed
 
     private void lActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+l.getText());
+        PSnom.setText(PSnom.getText()+l.getText());
     }//GEN-LAST:event_lActionPerformed
 
     private void pActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+p.getText());
+        PSnom.setText(PSnom.getText()+p.getText());
     }//GEN-LAST:event_pActionPerformed
 
     private void zActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+z.getText());
+        PSnom.setText(PSnom.getText()+z.getText());
     }//GEN-LAST:event_zActionPerformed
 
     private void xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+x.getText());
+        PSnom.setText(PSnom.getText()+x.getText());
     }//GEN-LAST:event_xActionPerformed
 
     private void vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+v.getText());
+        PSnom.setText(PSnom.getText()+v.getText());
     }//GEN-LAST:event_vActionPerformed
 
     private void bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+b.getText());
+        PSnom.setText(PSnom.getText()+b.getText());
     }//GEN-LAST:event_bActionPerformed
 
     private void mActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+m.getText());
+        PSnom.setText(PSnom.getText()+m.getText());
     }//GEN-LAST:event_mActionPerformed
 
     private void cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+c.getText());
+        PSnom.setText(PSnom.getText()+c.getText());
     }//GEN-LAST:event_cActionPerformed
 
     private void nActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+n.getText());
+        PSnom.setText(PSnom.getText()+n.getText());
     }//GEN-LAST:event_nActionPerformed
 
     private void botão4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão4ActionPerformed
         String bt;
-        if(CaixaTx.getText().length()>0){
+        if(PSnom.getText().length()>0){
         }
 
-        StringBuilder st = new StringBuilder(CaixaTx.getText());
-        st.deleteCharAt(CaixaTx.getText().length()-1);
+        StringBuilder st = new StringBuilder(PSnom.getText());
+        st.deleteCharAt(PSnom.getText().length()-1);
         bt = st.toString();
-        CaixaTx.setText(bt);
+        PSnom.setText(bt);
     }//GEN-LAST:event_botão4ActionPerformed
 
     private void botão2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botão2MouseClicked
@@ -838,12 +850,13 @@ public class AtendCom extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Modelos.TextField CaixaTx;
     private javax.swing.JButton Espaco;
+    public Modelos.TextField PSnom;
+    private javax.swing.JTextField Psenha2;
     private javax.swing.JButton Volta1;
     private Modelos.Botão a;
     private Modelos.Botão b;
-    private Modelos.Botão botão1;
+    public Modelos.Botão botão1;
     private Modelos.Botão botão2;
     private Modelos.Botão botão4;
     private Modelos.Botão c;

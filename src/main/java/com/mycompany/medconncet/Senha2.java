@@ -39,5 +39,5 @@ public class Senha2 {
             System.out.println("Senha gerada: " + senhaGerada);
     }
     
-}
+  }
 }

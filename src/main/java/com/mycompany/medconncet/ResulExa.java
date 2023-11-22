@@ -4,6 +4,7 @@
  */
 package com.mycompany.medconncet;
 
+import static com.mycompany.medconncet.Senha4.gerarSenha4;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,7 +20,7 @@ public class ResulExa extends javax.swing.JFrame {
     public ResulExa() {
         initComponents();
         
-     Volta3.setBackground(new java.awt.Color(0,0,0,1));
+   
     }
 
     /**
@@ -62,9 +63,10 @@ public class ResulExa extends javax.swing.JFrame {
         n = new Modelos.Botão();
         botão1 = new Modelos.Botão();
         botão2 = new Modelos.Botão();
-        CaixaTx = new Modelos.TextField();
+        Nexam = new Modelos.TextField();
         Volta3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        pSenha = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1350, 900));
@@ -583,15 +585,15 @@ public class ResulExa extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(70, 480, 1230, 300);
 
-        CaixaTx.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        CaixaTx.setLineColor(new java.awt.Color(255, 255, 255));
-        CaixaTx.addActionListener(new java.awt.event.ActionListener() {
+        Nexam.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Nexam.setLineColor(new java.awt.Color(255, 255, 255));
+        Nexam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CaixaTxActionPerformed(evt);
+                NexamActionPerformed(evt);
             }
         });
-        getContentPane().add(CaixaTx);
-        CaixaTx.setBounds(120, 380, 814, 65);
+        getContentPane().add(Nexam);
+        Nexam.setBounds(120, 380, 814, 65);
 
         Volta3.setForeground(new java.awt.Color(255, 255, 255));
         Volta3.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\de-volta.png")); // NOI18N
@@ -608,133 +610,144 @@ public class ResulExa extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1350, 880);
 
+        pSenha.setText("jButton1");
+        getContentPane().add(pSenha);
+        pSenha.setBounds(800, 110, 75, 23);
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void B1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_B1ActionPerformed
-       SenhaExam snh3 = new SenhaExam();
-        snh3.setVisible(true);
-        dispose();      
+       String gerarSenha4 = gerarSenha4(4);
+       pSenha.setText(gerarSenha4);  
+       
+       
+        SenhaExam Sexam = new SenhaExam();
+        Sexam.NSexam.setText(Nexam.getText());
+        Sexam.Senha3.setText(pSenha.getText());
+        Sexam.setVisible(true);
+        dispose();
+  
     }//GEN-LAST:event_B1ActionPerformed
 
     private void qActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+q.getText());
+       Nexam.setText(Nexam.getText()+q.getText());
     }//GEN-LAST:event_qActionPerformed
 
     private void wActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wActionPerformed
-      CaixaTx.setText(CaixaTx.getText()+w.getText());
+      Nexam.setText(Nexam.getText()+w.getText());
     }//GEN-LAST:event_wActionPerformed
 
-    private void CaixaTxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CaixaTxActionPerformed
+    private void NexamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NexamActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_CaixaTxActionPerformed
+    }//GEN-LAST:event_NexamActionPerformed
 
     private void botão1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão1ActionPerformed
         String bt;
-      if(CaixaTx.getText().length()>0){
+      if(Nexam.getText().length()>0){
       }
       
-        StringBuilder st = new StringBuilder(CaixaTx.getText());
-        st.deleteCharAt(CaixaTx.getText().length()-1);
+        StringBuilder st = new StringBuilder(Nexam.getText());
+        st.deleteCharAt(Nexam.getText().length()-1);
         bt = st.toString();
-        CaixaTx.setText(bt);
+        Nexam.setText(bt);
     }//GEN-LAST:event_botão1ActionPerformed
 
     private void eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eActionPerformed
-     CaixaTx.setText(CaixaTx.getText()+e.getText());
+     Nexam.setText(Nexam.getText()+e.getText());
     }//GEN-LAST:event_eActionPerformed
 
     private void rActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+r.getText());
+       Nexam.setText(Nexam.getText()+r.getText());
     }//GEN-LAST:event_rActionPerformed
 
     private void tActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+t.getText());
+       Nexam.setText(Nexam.getText()+t.getText());
     }//GEN-LAST:event_tActionPerformed
 
     private void yActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+y.getText());
+       Nexam.setText(Nexam.getText()+y.getText());
     }//GEN-LAST:event_yActionPerformed
 
     private void uActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uActionPerformed
-      CaixaTx.setText(CaixaTx.getText()+u.getText());
+      Nexam.setText(Nexam.getText()+u.getText());
     }//GEN-LAST:event_uActionPerformed
 
     private void iActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+i.getText());
+       Nexam.setText(Nexam.getText()+i.getText());
     }//GEN-LAST:event_iActionPerformed
 
     private void oActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+o.getText());
+        Nexam.setText(Nexam.getText()+o.getText());
     }//GEN-LAST:event_oActionPerformed
 
     private void pActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+p.getText());
+       Nexam.setText(Nexam.getText()+p.getText());
     }//GEN-LAST:event_pActionPerformed
 
     private void aActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+a.getText());
+        Nexam.setText(Nexam.getText()+a.getText());
     }//GEN-LAST:event_aActionPerformed
 
     private void sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+s.getText());
+       Nexam.setText(Nexam.getText()+s.getText());
     }//GEN-LAST:event_sActionPerformed
 
     private void dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+d.getText());
+       Nexam.setText(Nexam.getText()+d.getText());
     }//GEN-LAST:event_dActionPerformed
 
     private void fActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+f.getText());
+       Nexam.setText(Nexam.getText()+f.getText());
     }//GEN-LAST:event_fActionPerformed
 
     private void gActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gActionPerformed
-      CaixaTx.setText(CaixaTx.getText()+g.getText());
+      Nexam.setText(Nexam.getText()+g.getText());
     }//GEN-LAST:event_gActionPerformed
 
     private void hActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+h.getText());
+        Nexam.setText(Nexam.getText()+h.getText());
     }//GEN-LAST:event_hActionPerformed
 
     private void jActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+j.getText());
+       Nexam.setText(Nexam.getText()+j.getText());
     }//GEN-LAST:event_jActionPerformed
 
     private void kActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+k.getText());
+       Nexam.setText(Nexam.getText()+k.getText());
     }//GEN-LAST:event_kActionPerformed
 
     private void lActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lActionPerformed
-        CaixaTx.setText(CaixaTx.getText()+l.getText());
+        Nexam.setText(Nexam.getText()+l.getText());
     }//GEN-LAST:event_lActionPerformed
 
     private void zActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+z.getText());
+       Nexam.setText(Nexam.getText()+z.getText());
     }//GEN-LAST:event_zActionPerformed
 
     private void xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+x.getText());
+       Nexam.setText(Nexam.getText()+x.getText());
     }//GEN-LAST:event_xActionPerformed
 
     private void cActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+c.getText());
+       Nexam.setText(Nexam.getText()+c.getText());
     }//GEN-LAST:event_cActionPerformed
 
     private void vActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vActionPerformed
-     CaixaTx.setText(CaixaTx.getText()+v.getText());
+     Nexam.setText(Nexam.getText()+v.getText());
     }//GEN-LAST:event_vActionPerformed
 
     private void bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bActionPerformed
-      CaixaTx.setText(CaixaTx.getText()+b.getText());
+      Nexam.setText(Nexam.getText()+b.getText());
     }//GEN-LAST:event_bActionPerformed
 
     private void nActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+n.getText());
+       Nexam.setText(Nexam.getText()+n.getText());
     }//GEN-LAST:event_nActionPerformed
 
     private void mActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mActionPerformed
-       CaixaTx.setText(CaixaTx.getText()+m.getText());
+       Nexam.setText(Nexam.getText()+m.getText());
     }//GEN-LAST:event_mActionPerformed
 
     private void botão2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botão2ActionPerformed
@@ -805,7 +818,7 @@ public class ResulExa extends javax.swing.JFrame {
     }//GEN-LAST:event_botão2MouseClicked
 
     private void EspacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EspacoActionPerformed
-      CaixaTx.setText(CaixaTx.getText()+" ");
+      Nexam.setText(Nexam.getText()+" ");
     }//GEN-LAST:event_EspacoActionPerformed
 
     private void Volta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volta3ActionPerformed
@@ -852,8 +865,8 @@ public class ResulExa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public Modelos.Botão B1;
-    public Modelos.TextField CaixaTx;
     private javax.swing.JButton Espaco;
+    public Modelos.TextField Nexam;
     private javax.swing.JButton Volta3;
     private Modelos.Botão a;
     private Modelos.Botão b;
@@ -875,6 +888,7 @@ public class ResulExa extends javax.swing.JFrame {
     private Modelos.Botão n;
     private Modelos.Botão o;
     private Modelos.Botão p;
+    private javax.swing.JButton pSenha;
     private Modelos.Botão q;
     private Modelos.Botão r;
     private Modelos.Botão s;

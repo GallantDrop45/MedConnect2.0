@@ -19,8 +19,8 @@ public class SenhaPref extends javax.swing.JFrame {
      */
     public SenhaPref() {
         initComponents();
-          Volta5.setBackground(new java.awt.Color(0,0,0,1));
-          Senha.setBackground(new java.awt.Color(0,0,0,1));
+          
+          
     }
 
     /**
@@ -32,26 +32,15 @@ public class SenhaPref extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        textField1 = new Modelos.TextField();
         gerarSenha2 = new Modelos.Botão();
-        Senha = new javax.swing.JTextField();
+        Senha4 = new javax.swing.JTextField();
         Volta5 = new javax.swing.JButton();
+        Npref = new Modelos.TextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1360, 890));
         getContentPane().setLayout(null);
-
-        textField1.setBorder(null);
-        textField1.setLineColor(new java.awt.Color(255, 255, 255));
-        textField1.setSelectionColor(new java.awt.Color(255, 255, 255));
-        textField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textField1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(textField1);
-        textField1.setBounds(90, 370, 814, 65);
 
         gerarSenha2.setBorder(null);
         gerarSenha2.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,14 +59,14 @@ public class SenhaPref extends javax.swing.JFrame {
         getContentPane().add(gerarSenha2);
         gerarSenha2.setBounds(940, 370, 244, 65);
 
-        Senha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Senha.addActionListener(new java.awt.event.ActionListener() {
+        Senha4.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        Senha4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SenhaActionPerformed(evt);
+                Senha4ActionPerformed(evt);
             }
         });
-        getContentPane().add(Senha);
-        Senha.setBounds(460, 520, 333, 120);
+        getContentPane().add(Senha4);
+        Senha4.setBounds(460, 520, 333, 120);
 
         Volta5.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\de-volta.png")); // NOI18N
         Volta5.setBorder(null);
@@ -89,6 +78,11 @@ public class SenhaPref extends javax.swing.JFrame {
         getContentPane().add(Volta5);
         Volta5.setBounds(70, 110, 70, 50);
 
+        Npref.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Npref.setLineColor(new java.awt.Color(255, 255, 255));
+        getContentPane().add(Npref);
+        Npref.setBounds(110, 370, 814, 65);
+
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Faculdade2\\MedConncet\\src\\main\\java\\Imagens\\AtendimentoPref.png")); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1350, 880);
@@ -97,28 +91,20 @@ public class SenhaPref extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textField1ActionPerformed
-
     private void gerarSenha2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gerarSenha2ActionPerformed
-            ConsultaFila cf = new ConsultaFila();
-            cf.E1.setText(Senha.getText());
-            cf.setVisible(true);
-            dispose();
-            
-        String gerarSenha3 = gerarSenha3 (4); 
-         Senha.setText(gerarSenha3); 
+       Menu mn = new Menu();
+       mn.setVisible(true);
+       dispose();
     }//GEN-LAST:event_gerarSenha2ActionPerformed
 
-    private void SenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhaActionPerformed
+    private void Senha4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Senha4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SenhaActionPerformed
+    }//GEN-LAST:event_Senha4ActionPerformed
 
     private void Volta5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Volta5ActionPerformed
-        Menu mn = new Menu();
-        mn.setVisible(true);
-        dispose();
+      AtendPref prf = new AtendPref();
+      prf.setVisible(true);
+      dispose();
     }//GEN-LAST:event_Volta5ActionPerformed
 
     /**
@@ -157,10 +143,10 @@ public class SenhaPref extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Senha;
+    public Modelos.TextField Npref;
+    public javax.swing.JTextField Senha4;
     private javax.swing.JButton Volta5;
     private Modelos.Botão gerarSenha2;
     private javax.swing.JLabel jLabel1;
-    private Modelos.TextField textField1;
     // End of variables declaration//GEN-END:variables
 }
